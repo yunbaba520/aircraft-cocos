@@ -38,9 +38,6 @@ export class Game extends Component {
     this._fly = this.fly.getComponent(Fly);
   }
   start() {
-    // 监听键盘输入
-    // input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
-    // input.on(Input.EventType.KEY_UP, this.onKeyUp, this);
     // 加载敌机
     this.schedule(() => {
       this.createEnemy();
@@ -51,57 +48,7 @@ export class Game extends Component {
       this.emitBullet();
     }, 0.5);
   }
-  protected onDestroy(): void {
-    // input.off(Input.EventType.KEY_DOWN, this.onKeyDown, this);
-    // input.off(Input.EventType.KEY_UP, this.onKeyUp, this);
-  }
   update(deltaTime: number) {}
-
-  // onKeyDown(event: EventKeyboard) {
-  //   console.log("down->>>", event.keyCode);
-  //   switch (event.keyCode) {
-  //     case KeyCode.KEY_A:
-  //       this._fly.v.set(-3, 0);
-  //       break;
-  //     case KeyCode.KEY_D:
-  //       this._fly.v.set(3, 0);
-
-  //       break;
-  //     case KeyCode.KEY_W:
-  //       this._fly.v.set(0, 3);
-
-  //       break;
-  //     case KeyCode.KEY_S:
-  //       this._fly.v.set(0, -3);
-
-  //       break;
-  //     default:
-  //       break;
-  //   }
-  // }
-
-  // onKeyUp(event: EventKeyboard) {
-  //   console.log("up->>>", event.keyCode);
-  //   switch (event.keyCode) {
-  //     case KeyCode.KEY_A:
-  //       this._fly.v.set(0, 0);
-  //       break;
-  //     case KeyCode.KEY_D:
-  //       this._fly.v.set(0, 0);
-
-  //       break;
-  //     case KeyCode.KEY_W:
-  //       this._fly.v.set(0, 0);
-
-  //       break;
-  //     case KeyCode.KEY_S:
-  //       this._fly.v.set(0, 0);
-
-  //       break;
-  //     default:
-  //       break;
-  //   }
-  // }
 
   createEnemy() {
     let createOne = () => {
@@ -166,6 +113,6 @@ export class Game extends Component {
   // 加分
   addScore() {
     this._score++;
-    this.scoreLabel.getComponent(Label).string = `${this._score}`;
+    this.scoreLabel.getComponent(Label).string = `得分:${this._score}`;
   }
 }
