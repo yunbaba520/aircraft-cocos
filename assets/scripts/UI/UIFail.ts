@@ -6,10 +6,7 @@ export class UIFail extends Component {
   start() {}
 
   update(deltaTime: number) {}
-  onContinueBtnClick() {
-    director.resume();
-    this.node.active = false;
-  }
+
   onAgainBtnClick() {
     console.log("again");
     // director.purgeDirector();

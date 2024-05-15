@@ -8,7 +8,9 @@ import {
   Contact2DType,
   director,
   game,
+  Label,
 } from "cc";
+import { Fly } from "./Fly";
 const { ccclass, property } = _decorator;
 
 @ccclass("FlyUi")
@@ -18,7 +20,13 @@ export class FlyUi extends Component {
 
   @property(Node)
   uiFail: Node;
-  start() {}
+  @property(Label)
+  labelHp: Label;
+
+  _fly: Fly;
+  start() {
+    this._fly = this.fly.getComponent(Fly);
+  }
 
   update(deltaTime: number) {}
   protected onEnable(): void {
@@ -53,10 +61,15 @@ export class FlyUi extends Component {
   onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D) {
     if (otherCollider.group === 2) {
       console.log("飞机相撞");
-      // 暂停
-      director.pause();
-      // 显示出失败画面
-      this.uiFail.active = true;
+      this._fly.HP--;
+      this.labelHp.string = `血量：${this._fly.HP}`;
+      // 是否还有hp
+      if (this._fly.HP <= 0) {
+        // 暂停
+        director.pause();
+        // 显示出失败画面
+        this.uiFail.active = true;
+      }
     }
   }
 }

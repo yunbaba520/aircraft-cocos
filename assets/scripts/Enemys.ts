@@ -31,13 +31,17 @@ export class Enemy extends Component {
   }
   onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D) {
     // console.log("开始碰撞");
-    // console.log(otherCollider);
+    console.log(otherCollider);
     if (otherCollider.group === 4) {
       console.log("子弹碰到敌机");
       // 计算得分
       this._deadCallBack.call(this._target);
       // 销毁子弹，敌机
       otherCollider.node.destroy();
+      this.node.destroy();
+    }
+    if (otherCollider.group === 8) {
+      console.log("飞机碰到敌机");
       this.node.destroy();
     }
   }
