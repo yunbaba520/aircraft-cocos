@@ -37,7 +37,10 @@ export class Game extends Component {
   protected onLoad(): void {
     this._fly = this.fly.getComponent(Fly);
   }
-  start() {
+  start() {}
+  update(deltaTime: number) {}
+
+  protected onEnable(): void {
     // 加载敌机
     this.schedule(() => {
       this.createEnemy();
@@ -48,7 +51,6 @@ export class Game extends Component {
       this.emitBullet();
     }, 0.5);
   }
-  update(deltaTime: number) {}
 
   createEnemy() {
     let createOne = () => {

@@ -1,12 +1,4 @@
-import {
-  _decorator,
-  Component,
-  Node,
-  Vec2,
-  Input,
-  input,
-  EventTouch,
-} from "cc";
+import { _decorator, Component, Node } from "cc";
 const { ccclass, property } = _decorator;
 
 @ccclass("Fly")

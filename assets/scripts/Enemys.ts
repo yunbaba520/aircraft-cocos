@@ -30,8 +30,8 @@ export class Enemy extends Component {
     }
   }
   onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D) {
-    console.log("开始碰撞");
-    console.log(otherCollider);
+    // console.log("开始碰撞");
+    // console.log(otherCollider);
     if (otherCollider.group === 4) {
       console.log("子弹碰到敌机");
       // 计算得分
