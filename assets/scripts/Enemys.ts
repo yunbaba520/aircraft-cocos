@@ -1,8 +1,19 @@
-import { _decorator, Collider2D, Component, Contact2DType, Node } from "cc";
+import {
+  _decorator,
+  CCInteger,
+  Collider2D,
+  Component,
+  Contact2DType,
+  Node,
+} from "cc";
 const { ccclass, property } = _decorator;
 
 @ccclass("Enemy")
 export class Enemy extends Component {
+  @property(CCInteger)
+  speedTime = 3;
+  @property(CCInteger)
+  HP = 2; // 需要打几下
   _deadCallBack: () => void;
   _target: any;
 
@@ -34,11 +45,15 @@ export class Enemy extends Component {
     console.log(otherCollider);
     if (otherCollider.group === 4) {
       console.log("子弹碰到敌机");
-      // 计算得分
-      this._deadCallBack.call(this._target);
-      // 销毁子弹，敌机
+      this.HP--;
+      // 销毁子弹
       otherCollider.node.destroy();
-      this.node.destroy();
+      if (this.HP <= 0) {
+        // 计算得分
+        this._deadCallBack.call(this._target);
+        // 敌机
+        this.node.destroy();
+      }
     }
     if (otherCollider.group === 8) {
       console.log("飞机碰到敌机");

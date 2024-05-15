@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.Prefab",
-    "_name": "Enemy01",
+    "_name": "Enemy04",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_native": "",
@@ -13,7 +13,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Enemy01",
+    "_name": "Enemy04",
     "_objFlags": 0,
     "__editorExtras__": {},
     "_parent": null,
@@ -46,8 +46,8 @@
       "__type__": "cc.Quat",
       "x": 0,
       "y": 0,
-      "z": 0,
-      "w": 1
+      "z": -1,
+      "w": 6.123233995736766e-17
     },
     "_lscale": {
       "__type__": "cc.Vec3",
@@ -56,12 +56,12 @@
       "z": 1
     },
     "_mobility": 0,
-    "_layer": 33554432,
+    "_layer": 1073741824,
     "_euler": {
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 0
+      "z": -180
     },
     "_id": ""
   },
@@ -79,8 +79,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 30,
-      "height": 24
+      "width": 99,
+      "height": 73
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -91,7 +91,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "b6QaHdxdxNlKtWEijBifti"
+    "fileId": "d13exotZpLq75AfShx+irA"
   },
   {
     "__type__": "cc.Sprite",
@@ -116,7 +116,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "791e0c13-43b7-4b6b-b72e-995610877bb1@f9941",
+      "__uuid__": "0776ee50-ae4b-4ecc-89a3-6e18a66e97eb@f9941",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -136,7 +136,7 @@
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "7dsdENaatAmI4hKhUhrQIL"
+    "fileId": "a8IMPeYcFLa4aUNuxXLBe6"
   },
   {
     "__type__": "cc.BoxCollider2D",
@@ -163,14 +163,14 @@
     },
     "_size": {
       "__type__": "cc.Size",
-      "width": 30,
-      "height": 24
+      "width": 100,
+      "height": 80
     },
     "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "3d2rzSpZ9FDZvULY+frlzg"
+    "fileId": "4c6G6POFxH/7EwrqvaSejR"
   },
   {
     "__type__": "eddbcVKVwNDIZUeyOqom98R",
@@ -184,13 +184,13 @@
     "__prefab": {
       "__id__": 9
     },
-    "speedTime": 3,
-    "HP": 1,
+    "speedTime": 15,
+    "HP": 5,
     "_id": ""
   },
   {
     "__type__": "cc.CompPrefabInfo",
-    "fileId": "bfyx382cpCKqI+nulFdLvY"
+    "fileId": "f6iUAAUxhPuYmkTYman04H"
   },
   {
     "__type__": "cc.PrefabInfo",

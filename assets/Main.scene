@@ -861,6 +861,8 @@
     },
     "_enabled": true,
     "__prefab": null,
+    "speedTime": 3,
+    "HP": 2,
     "_id": "5dBngWxGxKjLTSks0o/o6X"
   },
   {
@@ -1236,6 +1238,22 @@
     },
     "scoreLabel": {
       "__id__": 29
+    },
+    "enemy01Prefab": {
+      "__uuid__": "98be951e-22dc-45bf-9d59-74e39ddfc325",
+      "__expectedType__": "cc.Prefab"
+    },
+    "enemy02Prefab": {
+      "__uuid__": "595393f2-4e34-4e26-a6b6-e956d059ed0e",
+      "__expectedType__": "cc.Prefab"
+    },
+    "enemy03Prefab": {
+      "__uuid__": "9a7ce6c5-5740-4f53-bf30-f893d0742db6",
+      "__expectedType__": "cc.Prefab"
+    },
+    "enemy04Prefab": {
+      "__uuid__": "74abd6bf-e2c9-49f3-a3a6-bc046bd8bcba",
+      "__expectedType__": "cc.Prefab"
     },
     "_id": "95dhucxq5ESrywYG1Y2vqi"
   },
